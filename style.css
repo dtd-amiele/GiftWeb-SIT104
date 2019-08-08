@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1, p, ul, li, table {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+body{
+	
+	background-image: url(img/concrete-wall.png);
+	background-color:#E5DBD1; 
+	font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif ; 
+	font-size:18px ;
+	color:#94887C;
+}
+
+a {
+	text-decoration:none;
+	color:#867E7D;
+}
+
+a:hover{
+		font-style:italic;
+}
+
+ul {
+	list-style-image: url('img/icon.png');
+
+}
+
+.present{
+	text-decoration:underline;
+	font-size: 24px;
+	font-weight: 900;
+	
+}
+.even {
+	background-color:#F4F0EA;
+}
+
+.odd {
+	background-color:#FAF8F5;
+}
+
+#content .image:hover{
+	border:none;
+	opacity:0.60;
+}
+
+#content .box:hover {
+	border:dotted;
+	font-style:italic;
+	
+}
+#content .top:hover {
+	
+	font-style:italic;
+	border:none;
+	
+}
+
+.navigation:hover{
+	borer:none;
+	font-style:italic;	
+}
+
+.button:hover{
+	
+}
+
+span{
+	font-size:12px
+}
+
+.text{
+	height:27px;
+}
+
+

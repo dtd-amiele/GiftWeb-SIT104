@@ -1,0 +1,320 @@
+<!DOCTYPE html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CONTACT</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+//check form
+function Validation(){
+	var check=true;
+	if (document.form.firstname.value==""){	
+		document.form.firstname.style.border="1px solid #ED7D31";
+		document.getElementById("firstname_error").style.color= "#ED7D31";
+		document.getElementById("firstname_error").innerHTML="Please enter your first name";
+		check=false;
+
+	}
+	else 
+	{
+	document.getElementById("firstname_error").innerHTML="";
+	document.form.firstname.style.border="1px solid #ABADB3";
+	}
+	if (document.form.lastname.value==""){
+
+		document.form.lastname.style.border="1px solid #ED7D31";
+		document.getElementById("lastname_error").style.color= "#ED7D31";
+		document.getElementById("lastname_error").innerHTML="Please enter your last name";
+		check=false;
+
+	}
+	else
+	{
+	document.getElementById("lastname_error").innerHTML="";
+	document.form.lastname.style.border="1px solid #ABADB3";
+	}
+	if (document.form.phonenum.value==""){
+
+		document.form.phonenum.style.border="1px solid #ED7D31";
+		document.getElementById("phonenum_error").style.color= "#ED7D31";
+		document.getElementById("phonenum_error").innerHTML="Please enter your phone number";
+		check=false;
+
+	}
+	else if (isNaN(document.form.phonenum.value)) {
+		document.form.phonenum.style.border="1px solid #ED7D31";
+		document.getElementById("phonenum_error").style.color= "#ED7D31";
+		document.getElementById("phonenum_error").innerHTML="Please enter valid phone number";
+		check=false;
+	
+	}
+	else
+	{
+	document.getElementById("phonenum_error").innerHTML="";
+	document.form.phonenum.style.border="1px solid #ABADB3";
+	}
+	if (document.form.email.value==""){
+
+		document.form.email.style.border="1px solid #ED7D31";
+		document.getElementById("email_error").style.color= "#ED7D31";
+		document.getElementById("email_error").innerHTML="Please enter your valid e-mail";
+		check=false;
+	}
+	else if ((document.form.email.value.indexOf('@')==-1)){
+		document.form.email.style.border="1px solid #ED7D31";
+		document.getElementById("email_error").style.color= "#ED7D31";
+		document.getElementById("email_error").innerHTML="Please enter valid e-mail";
+		check=false;
+	}
+	else
+	{
+	
+	document.getElementById("email_error").innerHTML="";
+	document.form.email.style.border="1px solid #ABADB3";
+	}
+	if (document.form.street.value==""){
+
+		document.form.street.style.border="1px solid #ED7D31";
+		document.getElementById("street_error").style.color= "#ED7D31";
+		document.getElementById("street_error").innerHTML="Please enter your street address";
+		check=false;
+
+	}
+	else
+	{
+	document.getElementById("street_error").innerHTML="";
+	document.form.street.style.border="1px solid #ABADB3";
+	}
+	if (document.form.SC.value==""){
+
+		document.form.SC.style.border="1px solid #ED7D31";
+		document.getElementById("SC_error").style.color= "#ED7D31";
+		document.getElementById("SC_error").innerHTML="Please enter your Suburd/ City";
+		check=false;
+
+	}
+
+	else
+	{
+	document.getElementById("SC_error").innerHTML="";
+	document.form.SC.style.border="1px solid #ABADB3";
+	}
+	if (document.form.postcode.value==""){
+
+		document.form.postcode.style.border="1px solid #ED7D31";
+		document.getElementById("postcode_error").style.color= "#ED7D31";
+		document.getElementById("postcode_error").innerHTML="Please enter your postcode";
+		check=false;
+
+	}
+	else if (isNaN(document.form.postcode.value)) {
+		document.form.postcode.style.border="1px solid #ED7D31";
+		document.getElementById("postcode_error").style.color= "#ED7D31";
+		document.getElementById("postcode_error").innerHTML="Please enter valid postcode";
+		check=false;
+	
+	}
+	else
+	{
+	document.getElementById("postcode_error").innerHTML="";
+	document.form.postcode.style.border="1px solid #ABADB3";
+	}
+	if (document.form.country.value==""){
+
+		document.form.country.style.border="1px solid #ED7D31";
+		document.getElementById("country_error").style.color= "#ED7D31";
+		document.getElementById("country_error").innerHTML="Please enter your country";
+		check=false;
+
+	}
+	else {
+	document.getElementById("country_error").innerHTML="";
+	document.form.country.style.border="1px solid #ABADB3";
+	}
+
+	return check;
+	
+	}
+	//reset form
+	function resetFile(){
+	document.getElementById("firstname_error").style.color= "#94887C";
+	document.getElementById("firstname_error").innerHTML="Ex: Amie";
+	document.form.firstname.style.border="1px solid #ABADB3";
+	//
+	document.getElementById("lastname_error").style.color= "#94887C";
+	document.getElementById("lastname_error").innerHTML="Ex: Le";
+	document.form.lastname.style.border="1px solid #ABADB3";
+	//
+	document.getElementById("phonenum_error").style.color= "#94887C";
+	document.getElementById("phonenum_error").innerHTML="Must be number, maximum 10 numbers";
+	document.form.phonenum.style.border="1px solid #ABADB3";
+	//
+	document.getElementById("email_error").style.color= "#94887C";
+	document.getElementById("email_error").innerHTML="Ex: abc@gmail.com";
+	document.form.email.style.border="1px solid #ABADB3";
+	//
+	document.getElementById("street_error").style.color= "#94887C";
+	document.getElementById("street_error").innerHTML="Ex: number, street name";
+	document.form.street.style.border="1px solid #ABADB3";
+	//
+	document.getElementById("SC_error").style.color= "#94887C";
+	document.getElementById("SC_error").innerHTML="Ex:Footcray, Melbourne";
+	document.form.SC.style.border="1px solid #ABADB3";
+	//
+	document.getElementById("postcode_error").style.color= "#94887C";
+	document.getElementById("postcode_error").innerHTML="Must be number. Ex: 3000";
+	document.form.postcode.style.border="1px solid #ABADB3";
+	//
+	document.getElementById("country_error").style.color= "#94887C";
+	document.getElementById("country_error").innerHTML="Ex: Australia";
+	document.form.country.style.border="1px solid #ABADB3";
+	//
+
+	//
+	
+	}
+</script>
+</head>
+
+<body>
+	<!-- Use <div> to devide page to separate sections-->
+  <!--Set the wrapper so the webpage is in the center of browser-->
+  <div id="wrapper" style="width:900px; margin:auto; margin-top:20px; margin-bottom:20px" >
+   <!--Edit Header -->
+	 <div id="header" style=" margin-bottom:30px; margin-top:30px;">
+   
+    	<p style="color: #5D5048; text-align:center; font-size:40px; font-weight:bold; font-style:italic "> ~~~ AMIE'S HOUSE ~~~ 
+        <br />
+        BRING RETRO BACK TO YOUR HOME</p>
+   
+  </div>
+  <!-- Edit Navigation-->
+  <!--<ul> <li> Use unorderlist (set the list inline) to create the Navigaton -->
+
+  <div id="nav"  style="  padding-top: 10px;padding-bottom: 10px;font-size:20px; border-radius:7px; border-color: #C0B7A6; border-bottom-style: double; border-top-style:double;  ">
+    <ul style=" margin-bottom: 5px; margin-top:5px;;margin-left: 20px;">
+      <li style="display:inline; margin-top:5px; margin-left:210px; margin-right:20px; margin-bottom:5px;;padding-top: 10px;padding-right: 5px; padding-bottom: 10px;padding-left: 5px"><a  class="navigation" href="HOME.html" style=" color:#867E6A; text-decoration: none;" >HOME</a> </li>
+      <li style="display:inline; margin-top:5px; margin-left:20px; margin-right:20px; margin-bottom:5px;padding-top: 10px;padding-right: 5px; padding-bottom: 10px;padding-left: 5px"><a  class="navigation" href="GIFT.html" style="color:#867E6A; text-decoration: none">GIFT</a></li>
+      <li style="display:inline; margin-top:5px; margin-left:20px; margin-right:20px; margin-bottom:5px;padding-top: 10px;padding-right: 5px; padding-bottom: 10px;padding-left: 5px"><a  class="navigation" href="SEARCH.html" style="color:#867E6A; text-decoration: none">SEARCH</a></li>
+      <li class="present" style="display:inline; margin-top:5px; margin-left:20px; margin-right:20px; margin-bottom:5px;padding-top: 10px;padding-right: 5px; padding-bottom: 10px;padding-left: 5px"><a  class="navigation" href="CONTACT.html" style=" color:#867E6A; text-decoration: none">CONTACT</a></li>
+    </ul>
+  </div>
+  
+	<!--Edit the content-->
+  <div id="content" style=" width:600px; margin:auto; min-height:590px;" >
+  	<!-- use <h1> to edit the heading title -->
+	<h1 style="text-align:center; color:#5E544A; margin-top:20px; margin-bottom:20px"> CONTACT FORM</h1>
+   
+	<!-- Use <form> to create form-->
+    <form name="form" action='FEEDBACK.php'  method='get' onSubmit="return Validation()" >
+    <!-- Use table to adjust position of form -->
+<table  style=" font-weight:bold; border:0" >
+<tr>
+<td style=" vertical-align:top; " >First Name:</td>
+<!--Text box-->
+ <td > <input type="text" name="firstname" id="firstname" size="50" class="text"/>
+ <br> 
+ <span id="firstname_error" style="color:#B0A9A2;">Ex: Amie</span>
+ <br>
+ </td>
+</tr>
+<tr>
+<td style=" vertical-align:top; " >Last Name:</td> <td> <input type="text" name="lastname" id="lastname" size="50" class="text"/> <br>
+ <span id="lastname_error" style="color:#B0A9A2;">Ex: Le</span>
+ <br></td>
+</tr>
+<tr>
+<td style=" vertical-align:top; " >Phone Number:</td> <td> <input type="text" name="phonenum" id="phonenum" size="50" maxlength="10" class="text"/> <br>
+ <span id="phonenum_error" style="color:#B0A9A2;">Must be number</span>
+ <br></td>
+</tr>
+<tr>
+<td style=" vertical-align:top; " >E-mail:</td> <td> <input type="text" name="email" id="email" size="50" class="text"/> <br>
+ <span id="email_error" style="color:#B0A9A2;">Ex: abc@gmail.com</span>
+ <br></td>
+</tr>
+<tr>
+<td style=" vertical-align:top; "  > Street Address:</td> <td> <input type="text" name="street" id="street" size="50" class="text"/> <br>
+ <span id="street_error" style="color:#B0A9A2;">Ex: number, street name</span>
+ <br></td>
+</tr>
+<tr>
+<td style=" vertical-align:top; " >Suburd/ City:</td> <td> <input type="text" name="SC" id="SC" size="50" class="text" /> <br>
+ <span id="SC_error" style="color:#B0A9A2;">Ex:Footcray, Melbourne</span>
+ <br></td>
+</tr>
+
+<tr>
+<td style=" vertical-align:top; " >Postcode:</td> <td> <input type="text" name="postcode" id="postcode" size="50" class="text"/> <br>
+ <span id="postcode_error" style="color:#B0A9A2;">Must be number. Ex: 3000</span>
+ <br></td>
+</tr>
+<tr>
+<td style=" vertical-align:top; " >Country:</td> <td> <input type="text" name="country" id="country" size="50" class="text"/> <br>
+ <span id="country_error" style="color:#B0A9A2;">Ex: Australia</span>
+ <br></td>
+</tr>
+
+<tr>
+<td>Gift</td>
+<td>
+	<!--Selction list-->
+	<select name='gift' id="gift" size="1"  style="width:250px;color:#94887C; font-size:20px;">
+		<option value='Vintage Envelopes' selected="selected">Vintage Envelopes</option>
+		<option value='Wall Decoration'>Wall Decoration</option>
+		<option value='Vintage Keyboard'>Vintage Keyboard</option>
+		<option value='Blue Paper Flower'>Blue Paper Flower</option>
+		<option value='Purple Paper Flower'>Purple Paper Flower</option>
+		<option value='Picture Frame'>Picture Frame</option>
+		<option value='Vintage Scrapbook'>Vintage Scrapbook</option>
+		<option value='Wall Clock'>Wall Clock</option>
+        <option value='Handheld Clock'>Handheld Clock</option>
+	</select>
+    </td>
+</tr>
+
+</table>
+	
+	<!--use <p> to make paragraph-->
+    <!-- use <b> to bold the sentence -->
+	<p><b>Other additional request:</b>(Optional)</p>
+    <!--text area-->
+<textarea name="comments" id="comments" rows="10" cols="60" style="color:#A49A90">
+</textarea><br>
+	
+	<p><b>Do you want to receive our promotion and new items through</b> <br />
+    
+   <!-- Radio buttons, with the option is checked-->
+	<input type="radio" name="message" value="email"  checked="checked"/>E-mail
+	<input type="radio" name="message"  value="message" />Message
+	<input type="radio" name="message"  value="none" />I don't want to receive information
+	</p>    
+	<p style="width:235px; margin:auto; margin-top:20px;">
+    <!-- Submit button-->
+    <input type="submit" value="SUBMIT" style=" font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;  font-size:18px ; font-weight:bold ;color:#867E7D; background-color:#D6C6B6 ; padding:5px; padding-left:15px; padding-right:15px; margin-right:10px; ; border-radius:5px;  " />
+    <!--Reset button-->
+    <input type="reset" value="RESET" onclick="resetFile()" style=" font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;  font-size:18px ; font-weight:bold ;color:#867E7D; background-color:#D6C6B6 ; padding:5px; padding-left:15px; padding-right:15px;  ; border-radius:5px;  "   />
+    
+    </p>
+    </form>
+
+ 
+        <h4 style="margin-bottom:5px">OR CONTACT THROUGH</h4>
+    	<table style="margin-top: 5px">
+        <tr>
+        	<th>Mobile:</th>
+            <td>0405176826</td>
+        </tr>
+        <tr>
+        	<th>E-mail:</th>
+            <td><a href="mailto:lizzieau24@gmail.com?Subject=Hello%20again" target="_top">lizzieau24@gmail.com</a></td>
+        </tr>
+        </table>
+
+	</div>
+  <!--Edit footer-->
+  <div id="footer"  style="border-color: #C0B7A6; border-top-style:double; margin-top: 15px; border-radius:7px;">
+  <p style="padding-top: 15px;padding-right: 10px;padding-bottom: 15px;padding-left: 35px; color:#867E6A">©Deakin College. This web page has been developed as a student assignment for the unit SIT104: Introduction to Web Development.</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+DROP TABLE gift;
+CREATE TABLE gift(
+	ITEM VARCHAR2(50),
+	PRICE FLOAT,
+	MATERIAL VARCHAR2(50),
+	ID VARCHAR2(10)
+	);
+INSERT INTO gift VALUES('Blue Paper Flower',149.25,'paper','gift1');
+INSERT INTO gift VALUES('Wall Decoration',29,'wood','gift2');
+INSERT INTO gift VALUES('Vintage Envelopes',50,'paper','gift3');
+INSERT INTO gift VALUES('Vintage Keyboard',69,'metal','gift4');
+INSERT INTO gift VALUES('Purple Paper Flower',119.25,'paper','gift5');
+INSERT INTO gift VALUES('Picture Decoration',9,'wood','gift6');
+INSERT INTO gift VALUES('Retro Scrapbook',59,'paper','gift7');
+INSERT INTO gift VALUES('Wall Clock',71.10,'metal','gift8');
+INSERT INTO gift VALUES('Handheld Clock',35.10,'metal','gift9');
+commit;
+
+DROP TABLE contact;
+CREATE TABLE contact(
+	fname VARCHAR2(50),
+	lname VARCHAR2(50),
+	mobile VARCHAR2(20),
+	email VARCHAR2(70),
+	street VARCHAR2(50),
+	sc VARCHAR2(50),
+	country VARCHAR2(20),
+	postcode float,
+	gift VARCHAR2(30),
+	comments VARCHAR2(500),
+	message VARCHAR2(20)
+	);
+commit;

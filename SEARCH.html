@@ -1,0 +1,113 @@
+<!DOCTYPE html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SEARCH</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<!-- Use <div> to devide page to separate sections-->
+    <!--Set the wrapper so the webpage is in the center of browser-->
+  <div id="wrapper" style="width:900px; margin:auto; margin-top:20px; margin-bottom:20px" >
+  <div id="header" style=" margin-bottom:30px; margin-top:30px;">
+   <!--Edit Header -->
+    	<p style="color: #5D5048; text-align:center; font-size:40px; font-weight:bold; font-style:italic "> ~~~ AMIE'S HOUSE ~~~ 
+        <br />
+        BRING RETRO BACK TO YOUR HOME</p>
+  </div>
+  <!-- Edit Navigation-->
+  <div id="nav"  style="  padding-top: 10px;padding-bottom: 10px;font-size:20px; border-radius:7px; border-color: #C0B7A6; border-bottom-style: double; border-top-style:double">
+  	<!--Use unorderlist (set the list inline) to create the Navigaton -->
+    <!--Use <a> tag to make link to other pages-->
+    <ul style="margin-bottom: 5px; margin-top:5px;;margin-left: 20px; ">
+      <li style="display:inline; margin-top:5px; margin-left:210px; margin-right:20px; margin-bottom:5px;;padding-top: 10px;padding-right: 5px; padding-bottom: 10px;padding-left: 5px"><a  class="navigation" href="HOME.html" style=" color:#867E6A; text-decoration: none;" >HOME</a> </li>
+      <li style="display:inline; margin-top:5px; margin-left:20px; margin-right:20px; margin-bottom:5px;padding-top: 10px;padding-right: 5px; padding-bottom: 10px;padding-left: 5px"><a  class="navigation" href="GIFT.html" style="color:#867E6A; text-decoration: none">GIFT</a></li>
+      <li class="present" style="display:inline; margin-top:5px; margin-left:20px; margin-right:20px; margin-bottom:5px;padding-top: 10px;padding-right: 5px; padding-bottom: 10px;padding-left: 5px"><a  class="navigation" href="SEARCH.html" style="color:#867E6A; text-decoration: none">SEARCH</a></li>
+      <li style="display:inline; margin-top:5px; margin-left:20px; margin-right:20px; margin-bottom:5px;padding-top: 10px;padding-right: 5px; padding-bottom: 10px;padding-left: 5px"><a  class="navigation" href="CONTACT.html" style=" color:#867E6A; text-decoration: none">CONTACT</a></li>
+    </ul>
+  </div>
+  
+	<!--Edit the content-->
+  <div id="content" style=" width:600px; margin:auto" >
+  	<!-- Use <h1> tag to edit the heading title -->
+	<h1 style="text-align:center; color:#5E544A; margin-top:20px; margin-bottom:20px"> SEARCH FORM</h1>
+	
+    <!-- Use <form> to create form page-->
+    <form  action='SEARCH.php'  method='get' >
+    <!-- Use table to adjust position of form -->
+<table  style=" font-weight:bold; border:0; width:600px" >
+<tr >
+<td style="width:20%; text-align:left; vertical-align:top">By Price:
+</td>
+ <td >
+ 	<!--radio button-->
+  <input type="radio" name="price"  value="1" checked="checked" ><i style=" font-weight: 100">All</i>
+  <br>
+   <input type="radio" name="price"  value="2"  ><i style=" font-weight: 100">less than $50</i>
+  <br>
+   <input type="radio" name="price" value="3"  ><i style=" font-weight: 100">$50 - $100</i>
+  <br>
+   <input type="radio" name="price"  value="4"  ><i style=" font-weight: 100">more than $100</i> <br>
+  <hr style="border: dotted; ">
+ </td>
+</tr>
+
+<tr  >
+<td style="width:20%; text-align:left; vertical-align:top" >By Item:</td>
+ <td >
+ <!--radio, camn choose multiple options-->
+  <input type="radio" name="item"  value="all" checked="checked"   ><i style=" font-weight: 100">All</i>
+  <br>
+  <input type="radio" name="item" value="Decoration"  >
+  <i style=" font-weight: 100">Decoration</i>
+  <br>
+   <input type="radio" name="item"  value="Envelope"  ><i style=" font-weight: 100">Envelope</i>
+  <br>
+   <input type="radio" name="item"  value="Paper Flower"  ><i style=" font-weight: 100">Paper Flower</i>
+  <br>
+   <input type="radio" name="item"  value="Scrapbook"  ><i style=" font-weight: 100">Scrap Book</i>
+  <br>
+  <input type="radio" name="item"  value="Clock"  ><i style=" font-weight: 100">Clock</i>
+  <br>
+  <input type="radio" name="item"  value="Teddy Bear"  ><i style=" font-weight: 100">Teddy Bear</i>
+  <br>
+  	<!--use <hr> create the horizontal line-->
+   <hr style="border: dotted; ">
+ </td>
+</tr>
+<tr >
+<td style="width:20%; text-align:left; vertical-align:top">By Material:</td>
+ <td >
+ <!--radio, camn choose multiple options-->
+  <input type="radio" name="material"  value="all"  checked="checked"  ><i style=" font-weight: 100">All</i>
+  <br>
+  <input type="radio" name="material"  value="paper"  ><i style=" font-weight: 100">Paper</i>
+  <br>
+   <input type="radio" name="material"  value="cloth"  ><i style=" font-weight: 100">Cloth</i>
+  <br>
+   <input type="radio" name="material"  value="wood"  ><i style=" font-weight: 100">Wood</i>
+  <br>
+   <input type="radio" name="material"  value="metal"  ><i style=" font-weight: 100">Metal</i> <br></td>
+</tr>
+
+
+</table>
+	
+	<span id="error"></span>
+	<!-- use <p> to make paragraph-->
+	<p style="width:90px; margin:auto; margin-top:20px;">
+    <!-- submmit button-->
+    <input type="submit" value="SUBMIT" style=" font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;  font-size:18px ; font-weight:bold ;color:#867E7D; background-color:#D6C6B6 ; padding:5px; padding-left:15px; padding-right:15px; border-radius:5px;  "  />
+
+    
+    </p>
+    </form>
+	</div>
+  <!--Edit the footer-->
+  <div id="footer"  style="border-color: #C0B7A6; border-top-style:double; margin-top: 15px; border-radius:7px;">
+  <p style="padding-top: 15px;padding-right: 10px;padding-bottom: 15px;padding-left: 35px; color:#867E6A">©Deakin College. This web page has been developed as a student assignment for the unit SIT104: Introduction to Web Development.</p>
+  </div>
+</div>
+</body>
+</html>
